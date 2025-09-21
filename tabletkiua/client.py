@@ -112,7 +112,7 @@ class TabletkiUA:
                 json=json,
                 headers=base_headers,
                 timeout=self._timeout,
-                verify=False,
+                verify=True,
             )
         except requests.RequestException as e:  # networking/timeouts
             raise NetworkError(str(e)) from e
